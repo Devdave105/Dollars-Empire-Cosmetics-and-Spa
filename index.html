@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollars Empire Cosmetics and Spa | Luxury Wellness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <div class="logo-wrapper">
+                    <span class="logo-text">DOLLARS EMPIRE</span>
+                    <span class="logo-subtext">COSMETICS & SPA</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="treatments.html">Facial Treatments</a></li>
+                        <li><a href="treatments.html">Body Treatments</a></li>
+                        <li><a href="massage.html">Massage Therapy</a></li>
+                        <li><a href="treatments.html">Skin Tag Removal</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="massage.html" class="nav-link">Massage</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="booking.html" class="nav-link booking-btn">Book Now</a>
+                </li>
+            </ul>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="heroVideo" onended="this.currentTime=0; this.play();">
+                <source src="vidoes/vidbk1.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img src="images/spa-interior-1.jpg" alt="Spa Background">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Experience Luxury Wellness</h1>
+            <p class="hero-subtitle">Professional skincare, therapeutic massage, and premium cosmetic treatments in a serene environment</p>
+            <div class="hero-buttons">
+                <a href="booking.html" class="btn-primary">Book Appointment</a>
+                <a href="services.html" class="btn-secondary">Our Services</a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
