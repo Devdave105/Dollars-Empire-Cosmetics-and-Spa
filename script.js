@@ -149,3 +149,39 @@ function ensureVideoLoop() {
 
 // Initialize video loop
 heroVideo.addEventListener('loadedmetadata', ensureVideoLoop);
+
+// About Split Section Video
+const showcaseVideo = document.querySelector('.showcase-video');
+
+function ensureShowcaseVideoLoop() {
+    showcaseVideo.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+        console.log('Showcase video restarted');
+    });
+}
+
+// Initialize showcase video
+showcaseVideo.addEventListener('loadedmetadata', ensureShowcaseVideoLoop);
+
+// Add click to play/pause functionality
+const playIcon = document.querySelector('.play-icon');
+playIcon.addEventListener('click', function() {
+    if (showcaseVideo.paused) {
+        showcaseVideo.play();
+        this.innerHTML = '<i class="fas fa-pause"></i>';
+    } else {
+        showcaseVideo.pause();
+        this.innerHTML = '<i class="fas fa-play"></i>';
+    }
+});
+
+// Video hover effect
+const videoContainer = document.querySelector('.video-container');
+videoContainer.addEventListener('mouseenter', function() {
+    this.style.transform = 'perspective(1000px) rotateY(0deg) scale(1.02)';
+});
+
+videoContainer.addEventListener('mouseleave', function() {
+    this.style.transform = 'perspective(1000px) rotateY(-5deg) scale(1)';
+});
